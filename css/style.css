@@ -393,3 +393,9 @@
     padding-right: 0;
     border-right: none;
 }
+
+/* Digitalitation */
+.digitize {
+    /* background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url(../img/bg-digitize.jpg) center center no-repeat; */
+    background-size: cover;
+}
