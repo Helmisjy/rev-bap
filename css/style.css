@@ -18,6 +18,15 @@
     z-index: 99;
 }
 
+.whatsapp {
+    position: fixed;
+    display: none;
+    left: 45px;
+    bottom: 45px;
+    z-index: 99;
+    /* margin-bottom: 45px; */
+}
+
 
 /*** Spinner ***/
 #spinner {
@@ -396,6 +405,213 @@
 
 /* Digitalitation */
 .digitize {
-    /* background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.4)), url(../img/bg-digitize.jpg) center center no-repeat; */
+    /* background: linear-gradient(rgba(0, 0, 0, .4), rgba(0, 0, 0, 0.2)), url(../img/bg-app.jpg) center center no-repeat; */
     background-size: cover;
 }
+
+
+
+
+
+/* Chatbox */
+
+
+
+  #click{
+    display: none;
+  }
+
+
+  label{
+    position: fixed;
+    left: 45px;
+    bottom: 45px;
+    height: 55px;
+    width: 55px;
+    /* background: -webkit-linear-gradient(left, #a445b2, #fa4299); */
+    background: var(--primary);
+    text-align: center;
+    line-height: 55px;
+    border-radius: 50px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 99;
+  }
+  label i{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+  }
+  label i.fas{
+    opacity: 0;
+    pointer-events: none;
+  }
+  #click:checked ~ label i.fas{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  #click:checked ~ label i.fab{
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  .wrapper{
+    position: fixed;
+    left: 45px;
+    bottom: 0px;
+    max-width: 400px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+  }
+  #click:checked ~ .wrapper{
+    opacity: 1;
+    bottom: 110px;
+    pointer-events: auto;
+  }
+  .wrapper .head-text{
+    line-height: 60px;
+    color: #fff;
+    border-radius: 15px 15px 0 0;
+    padding: 0 20px;
+    font-weight: 500;
+    font-size: 20px;
+    /* background: -webkit-linear-gradient(left, #a445b2, #fa4299); */
+    background: var(--primary);
+  }
+  .wrapper .chat-box{
+    padding: 20px;
+    width: 100%;
+  }
+  .chat-box .desc-text{
+    color: #515365;
+    text-align: center;
+    line-height: 25px;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .chat-box form{
+    padding: 10px 15px;
+    margin: 20px 0;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+  }
+  .chat-box form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .chat-box form .field:last-child{
+    margin-bottom: 15px;
+  }
+  form .field input,
+  form .field button,
+  form .textarea textarea{
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid lightgrey;
+    outline: none;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  form .field input:focus,
+  form .textarea textarea:focus{
+    /* border-color: #fc83bb; */
+    border-color: var(--primary);
+  }
+  form .field input::placeholder,
+  form .textarea textarea::placeholder{
+    color: silver;
+    transition: all 0.3s ease;
+  }
+  form .field input:focus::placeholder,
+  form .textarea textarea:focus::placeholder{
+    color: lightgrey;
+  }
+  .chat-box form .textarea{
+    height: 70px;
+    width: 100%;
+  }
+  .chat-box form .textarea textarea{
+    height: 100%;
+    border-radius: 50px;
+    resize: none;
+    padding: 15px 20px;
+    font-size: 16px;
+  }
+  .chat-box form .field button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    /* background: -webkit-linear-gradient(left, #a445b2, #fa4299); */
+    background: var(--primary);
+    transition: all 0.3s ease;
+  }
+  .chat-box form .field button:active{
+    transform: scale(0.97);
+  }
+
+
+  @media screen and (max-width:600px) {
+
+    .wrapper {
+        max-width: 300px;
+    }
+
+    .wrapper .head-text {
+        line-height: 40px;
+        padding: 0 10px;
+        font-size: 15px;
+    }
+
+    .wrapper .chat-box {
+        padding: 10px;
+    }
+
+    .chat-box .desc-text {
+        line-height: 20px;
+        font-size: 15px;
+    }
+
+    .chat-box form {
+        padding: 8px 12px;
+        margin: 15px 0;
+    }
+
+    .chat-box form .field {
+        height: 35px;
+        margin-top: 15px;
+    }
+
+    form .field input,
+    form .field button,
+    form .textarea textarea{
+        font-size: 12px;
+    }
+
+    .chat-box form .textarea{
+        height: 40px;
+    }
+
+    .chat-box form .textarea textarea{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+
+    .chat-box form .field button{
+        font-size: 14px;
+    }
+    
+  }

@@ -4,6 +4,39 @@
 <head>
     <meta charset="utf-8">
     <title>BAP | Berlian Amal Perkasa</title>
+
+    <!-- chatbot -->
+    <!-- Start of Async Drift Code -->
+    <script>
+    "use strict";
+    
+    !function() {
+      var t = window.driftt = window.drift = window.driftt || [];
+      if (!t.init) {
+        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
+        t.factory = function(e) {
+          return function() {
+            var n = Array.prototype.slice.call(arguments);
+            return n.unshift(e), t.push(n), t;
+          };
+        }, t.methods.forEach(function(e) {
+          t[e] = t.factory(e);
+        }), t.load = function(t) {
+          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+          var i = document.getElementsByTagName("script")[0];
+          i.parentNode.insertBefore(o, i);
+        };
+      }
+    }();
+    drift.SNIPPET_VERSION = '0.3.1';
+    drift.load('2apgrhdgcynv');
+    </script>
+    <!-- End of Async Drift Code -->
+
+
+
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -251,19 +284,17 @@
     <!-- Fact End -->
 
     <!-- Youtube Start -->
-    <div class="ccontainer-xxl py-5">
+    <div class="container-xxl youtube py-5">
         <div class="container">
             <div class="text-center">
                 <h6 class="text-primary text-uppercase">//Company Profile//</h6>
                 <h1 class="mb-5">About Company</h1>
+                <div class="col-md-6 py-5 text-center">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/fsjbYUW52Ws" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
             </div>
-            <div class="col-md-6 col-lg-auto text-center">
-                <iframe src="https://www.youtube.com/embed/fsjbYUW52Ws?start=150" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </div>            
         </div>
     </div>
-
-
     <!-- Youtube End -->
 
     <!-- Equipment Start -->
@@ -526,6 +557,43 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <!-- <a href="#" class="btn btn-lg btn-primary btn-lg-square whatsapp"><i class="bi bi-whatsapp"></i></a> -->
+
+    <!-- Chatbox Start -->
+    <div class="container-fluid chatbox">
+        <input class="" type="checkbox" id="click">
+          <label for="click">
+          <i class="fab fa-whatsapp"></i>
+          <i class="fas fa-times"></i>
+          </label>
+          <div class="col-12 col-sm-3 wrapper">
+             <div class="head-text">
+                Let's chat? - Online
+             </div>
+             <div class="col-12 col-sm-3 chat-box">
+                <div class="desc-text">
+                   Please fill out the form below to start chatting with the next available agent.
+                </div>
+                <form action="#">
+                   <div class="col-12 col-sm-3 field">
+                      <input type="text" placeholder="Your Name" required>
+                   </div>
+                   <div class="col-12 col-sm-3 field">
+                      <input type="email" placeholder="Email Address" required>
+                   </div>
+                   <div class="col-12 col-sm-3 field textarea">
+                      <textarea cols="30" rows="10" placeholder="Explain your queries.." required></textarea>
+                   </div>
+                   <div class="col-12 col-sm-3 field">
+                      <button href="https://wa.me" type="submit">Start Chat</button>
+                   </div>
+                </form>
+             </div>
+          </div>
+    </div>
+    <!-- chatboc End -->
+
+
 
 
     <!-- JavaScript Libraries -->
