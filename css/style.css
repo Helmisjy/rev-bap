@@ -454,7 +454,7 @@
     pointer-events: auto;
     transform: translate(-50%, -50%) rotate(180deg);
   }
-  #click:checked ~ label i.fab{
+  #click:checked ~ label i.fa{
     opacity: 0;
     pointer-events: none;
     transform: translate(-50%, -50%) rotate(180deg);
