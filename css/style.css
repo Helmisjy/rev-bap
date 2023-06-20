@@ -615,3 +615,15 @@
     }
     
   }
+
+
+  /* Project */
+
+  .imgBox{
+    transition: 0.4s;
+  }
+
+  .imgBox:hover {
+    transform: scale(1.2);
+    z-index: 1;
+  }
