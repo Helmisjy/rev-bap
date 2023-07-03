@@ -277,7 +277,7 @@
     background: var(--primary);
     transform: scale(0);
     transition: .5s;
-    opacity: 90%;
+    opacity: 100%;
 }
 
 .team-item:hover .team-overlay {
